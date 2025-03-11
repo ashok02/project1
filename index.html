@@ -13,7 +13,18 @@
             box-sizing: border-box;
         }
 
-        /* Background Section */
+        body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+html {
+            scroll-behavior: smooth; 
+            overflow-y: scroll; 
+        }
+
+
+        
         #main_bg {
             width: 100%;
             height: 1100px;
@@ -21,7 +32,9 @@
             background-image: url(./polygon-scatter-haikei.png);
             background-size: cover;
             position: relative;
+            overflow-x: hidden
         }
+        
 
         /* Fixed Navigation */
         #nav {
@@ -32,7 +45,12 @@
             color: white;
             z-index: 50;
             position: fixed;
-            top: 0;
+            top: 0%;
+            /* overflow-x: hidden */
+            
+        }
+        .ashok{
+            position: relative;
         }
 
         #nav ul {
@@ -40,12 +58,27 @@
             justify-content: center;
             list-style-type: none;
             display: flex;
-            gap: 35px;
+            /* gap: 35px;
+            background: gray; */
+            
+           
+        }
+        #nav #navs{
+            /* background-color:gainsboro; */
+        }
+        #navs{
+            /* position: absolute;
+            top: 0%; */
+            /* background: purple; */
+            width: 100%;
         }
 
         #nav a {
             color: white;
             text-decoration: none;
+            /* background: greenyellow; */
+
+             
         }
 
         /* Typing Effect */
@@ -161,8 +194,9 @@
         }
 
         #vvmain {
-            width: 100%;
+            width: 100vw;
             height: auto;
+            scrollbar-width: none;
         }
 
         #Special_offers_text {
@@ -171,7 +205,7 @@
             margin-left: 80px;
         }
 
-        #Special_offers {
+        /* #Special_offers {
             width: 100%;
             height: 700px;
             margin-top: 55px;
@@ -286,7 +320,127 @@
             position: relative;
             top: 20%;
             right: 10%;
-        }
+        } */
+
+
+        #Special_offers {
+    width: 100%;
+    height: 700px;
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+#left_Special_offers {
+    width: 45%;
+    height: 600px;
+    margin-top: 75px;
+}
+
+#left_Special_offers h3 {
+    margin-left: 65px;
+    padding: 10px;
+    color: white;
+    background-color: red;
+    display: inline;
+    border-radius: 15px;
+}
+
+#left_Special_offers img {
+    margin-top: 55px;
+    margin-left: 65px;
+    width: 90%; /* Adjusted width for responsiveness */
+    height: auto;
+}
+
+#left_Special_offers h1 {
+    margin-left: 95px;
+}
+
+#left_Special_offers span {
+    padding: 5px 10px;
+    background-color: white;
+    color: gray;
+    border-radius: 15px;
+    margin-left: 55px;
+    margin-top: 25px;
+    display: inline-block;
+}
+
+#left_Special_offers pre {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 45px;
+}
+
+#left_Special_offers strong {
+    font-size: 45px;
+    margin-left: 55px;
+}
+
+#left_Special_offers i {
+    padding: 10px 12px 8px 13px;
+    background-color: black;
+    color: white;
+    margin-left: 35%;
+    font-size: 15px;
+    border-radius: 15px;
+}
+
+#left_Special_offers a {
+    text-decoration: none;
+    color: white;
+}
+
+#right_Special_offers {
+    margin-left: 25px;
+    width: 45%;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: auto auto;
+}
+
+#right_Special_offers img {
+    width: 40%;
+    height: 30%;
+    margin-top: 15%;
+    margin-left: 10%;
+    background-color: bisque;
+}
+
+.cards_Special_offers {
+    text-align: center;
+    width: 85%;
+    height: 330px;
+    background-color: bisque;
+    margin-left: 15px;
+    margin-top: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 5px black;
+}
+
+.cards_Special_offers span {
+    background-color: red;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    position: relative;
+    top: 20px;
+    left: 25%;
+}
+
+.cards_Special_offers a {
+    text-decoration: none;
+    padding: 10px 5px;
+    color: black;
+    border-radius: 25px;
+    position: relative;
+    top: 20%;
+    right: 10%;
+}
+
+
+
 
         #sub_main {
             width: 100%;
@@ -411,6 +565,14 @@
             width: 100%;
         }
 
+
+        #text3 {
+            margin-top: 45px;
+            color: black;
+            margin-left: 75px;
+            font-size: 55px;
+        }
+
         #Trending_Burgers {
             width: 100%;
             height: 65vh;
@@ -428,12 +590,7 @@
             box-shadow: 5px 5px 5px black;
         }
 
-        #text3 {
-            margin-top: 45px;
-            color: black;
-            margin-left: 75px;
-            font-size: 55px;
-        }
+      
 
         .Trending_Burgers_cards img {
             width: 75%;
@@ -532,6 +689,7 @@
             margin-top: 25px;
             margin-left: 5px;
         }
+        /*  */
 
         #clients_say {
             margin-top: 85px;
@@ -693,59 +851,10 @@
             border: 2px solid black;
         }
 
-        @media (max-width: 576px) {
-            #a1 {
-                font-size: 40px;
-                top: 150px;
-                left: 50px;
-            }
+        
 
-            h2 {
-                font-size: 80px;
-                top: 140px;
-                left: 50px;
-            }
 
-            #burger-img {
-                width: 90%;
-                margin: 20px auto;
-            }
 
-            #nav ul {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            #second_main {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            #left_2nd img {
-                width: 100%;
-                height: auto;
-            }
-
-            #right_2nd h3 {
-                top: 50px;
-            }
-
-            #Special_offers {
-                flex-direction: column;
-                align-items: center;
-                height: auto;
-            }
-
-            #left_Special_offers, #right_Special_offers {
-                width: 90%;
-                height: auto;
-            }
-
-            #right_Special_offers {
-                flex-direction: column;
-            }
-        }
 
         .map-container {
             text-align: center;
@@ -760,6 +869,1081 @@
             background-color: #e62e2e;
             margin-left: 45%;
         }
+
+        #navs{
+        /* background: greenyellow; */
+        color: red;
+        
+    }
+
+
+
+        /*navbar chicklist button*/
+
+        @media (max-width: 768px) {
+
+    #nav{
+        /* position: relative; */
+    
+    }
+    #main_bg{
+        /* position: relative; */
+    }
+    /* #nav ul {
+        display: none; 
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+     
+       top:71%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(47, 33, 33, 0.582);
+        padding: 10px 0;
+        background: white;
+        z-index: 999;
+        color: red;
+        
+    } */
+
+    #nav ul.active {
+        display: flex; 
+    }
+
+    #toggleBtn {
+        display: block; 
+    }
+    .actibve{
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+        /* Responsive Styles */
+@media (max-width: 1024px) {
+    /* For tablets */
+    #a1 {
+        font-size: 50px;
+        top: 200px;
+        left: 100px;
+    }
+
+    h2 {
+        font-size: 100px;
+        top: 150px;
+        left: 100px;
+    }
+
+    #burger-img {
+        width: 500px;
+    }
+
+    #nav ul {
+        gap: 20px;
+    }
+    #main_bg h2{
+        margin-left: 15px;
+        margin-top: 45px;
+    }
+    #main_bg #a1{
+        margin-left: 115px;
+    }
+    #main_bg #see_more{
+        margin-left: 105px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* For mobile */
+
+
+    #main_bg{
+        width: 100%;
+        height: auto;
+    }
+    #main_bg h2{
+        margin-top: 45px;
+        
+        font-size:55px;
+    }
+
+    #main_bg span{
+        margin-left: -45px;
+    }
+    #a1 {
+        font-size: 35px;
+        top: 180px;
+        /* right: 15px; */
+        left: -40px;
+    }
+
+    h2 {
+        font-size: 80px;
+        top: 120px;
+        left: 50px;
+    }
+
+    #burger-img {
+        width: 350px;
+        margin-top: 90px;
+    }
+    #see_more{
+        margin-left: 5px;
+    }
+
+    #nav ul {
+        /* flex-direction: column; */
+        gap: 15px;
+    }
+
+    #nav {
+        background-color: rgba(47, 33, 33, 0.8);
+    }
+}
+
+@media (min-width: 1025px) {
+    /* For laptops */
+    #a1 {
+        font-size: 70px;
+        top: 220px;
+        left: 390px;
+    }
+
+    h2 {
+        font-size: 155px;
+        top: 190px;
+        left: 340px;
+    }
+
+    #burger-img {
+        width: 700px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #second_main {
+        height: auto;
+        margin-top: 80px;
+        flex-direction: column;
+    }
+
+    #second_main #left_2nd,
+    #second_main #right_2nd {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    #left_2nd img {
+        width: 100%;
+        height: auto;
+    }
+
+    #right_2nd h3 {
+        font-size: 18px;
+        top: 100px;
+    }
+
+  
+
+    #data h1 {
+        font-size: 40px;
+    }
+
+    #data p {
+        font-size: 16px;
+    }
+    #left_2nd #about{
+        width: 75%;
+        margin-left: 65px;
+    }
+
+    #right_Special_offers .cards_Special_offers{
+        margin-top: 65px;
+        height: 65vh;
+    }
+    #right_Special_offers{
+        height: 2000px;
+
+    }
+   
+
+  
+    
+
+
+
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    #second_main {
+        height: auto;
+        margin-top: 60px;
+        flex-direction: column;
+    }
+
+    #second_main #left_2nd,
+    #second_main #right_2nd {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    #left_2nd img {
+        width: 100%;
+        height: auto;
+    }
+
+    #right_2nd h3 {
+        font-size: 16px;
+        top: 80px;
+    }
+
+    #data {
+        margin-top: 80px;
+    }
+
+    #data h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #data p {
+        font-size: 14px;
+        text-align: justify;
+    }
+}
+
+
+
+
+
+/* Laptop and Larger Screens */
+@media (min-width: 1025px) {
+    #second_main {
+        display: flex;
+        height: 750px;
+    }
+
+    #second_main #left_2nd {
+        width: 50%;
+    }
+
+    #second_main #right_2nd {
+        width: 40%;
+    }
+
+    #left_2nd img {
+        width: 700px;
+        height: 730px;
+    }
+
+    #data h1 {
+        font-size: 50px;
+    }
+
+    #data p {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    #Special_offers {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #left_Special_offers {
+        width: 100%;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    #left_Special_offers img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #left_Special_offers h3 {
+        font-size: 18px;
+        margin: 0 auto;
+    }
+
+    #right_Special_offers {
+        width: 100%;
+        margin-left: 0;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+
+    .cards_Special_offers {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    #right_Special_offers img {
+        width: 60%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    #Special_offers {
+        flex-direction: column;
+        height: auto;
+        margin-top: 30px;
+        overflow: hidden;
+    }
+
+    #left_Special_offers {
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #left_Special_offers img {
+        width: 100%;
+    }
+
+    #left_Special_offers h3 {
+        font-size: 16px;
+    }
+
+    #left_Special_offers span {
+        font-size: 12px;
+        margin: 5px;
+    }
+
+    #vvmain #right_Special_offers {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .cards_Special_offers {
+        width: 95%;
+        height: auto;
+        margin: 10px auto;
+        box-shadow: 2px 2px 5px gray;
+    }
+
+    #right_Special_offers img {
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    
+}
+
+/* Laptop View (Default) */
+@media (min-width: 1025px) {
+    #Special_offers {
+        display: flex;
+        height: 700px;
+    }
+
+    #left_Special_offers {
+        width: 45%;
+    }
+
+    #right_Special_offers {
+        width: 45%;
+    }
+
+    .cards_Special_offers {
+        height: 330px;
+    }
+
+    #right_Special_offers img {
+        width: 40%;
+        height: 30%;
+    }
+}
+
+
+
+
+
+/* @media (max-width: 1024px) {
+    #sub_child1 {
+        flex-direction: column;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    #sub_child1_img, #sub_child4_img {
+        width: 100%;
+        height: 250px;
+        margin: 0;
+    }
+
+    #sub_child1_text, #sub_child3_text {
+        width: 100%;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    #sub_child1_text span, #sub_child3_text span {
+        position: static;
+        margin-bottom: 15px;
+    }
+
+    #sub_child1_text h1, #sub_child3_text h1 {
+        font-size: 40px;
+        margin: 10px 0;
+    }
+
+    #sub_child1_text p, #sub_child3_text p {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    #sub_child1_text a, #sub_child3_text a {
+        margin: 0 auto;
+        display: inline-block;
+    }
+} */
+
+/* Mobile View (768px and below) */
+/* @media (max-width: 768px) {
+    #sub_child1_img, #sub_child4_img {
+        height: 200px;
+    }
+
+    #sub_child1_text h1, #sub_child3_text h1 {
+        font-size: 30px;
+    }
+
+    #sub_child1_text p, #sub_child3_text p {
+        font-size: 14px;
+    }
+
+    #sub_child1_text span, #sub_child3_text span {
+        font-size: 14px;
+        padding: 3px 8px;
+    }
+
+    #sub_child1_text a, #sub_child3_text a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    #sub_child1, #sub_child2 {
+        margin: 10px 0;
+    }
+} */
+
+
+/*spacial_offer ==cardse*/
+
+@media (max-width: 1024px) {
+    #left_Special_offers,
+    #right_Special_offers {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .cards_Special_offers,
+    .Trending_Burgers_cards,
+    .Dessert_Menu_cards {
+        width: 45%; /* Adjusted for tablets */
+    }
+
+    #sub_child1_text h1,
+    #sub_child3_text h1 {
+        font-size: 50px;
+    }
+
+    #sub_child1_text p,
+    #sub_child3_text p {
+        font-size: 20px;
+    }
+
+    #sub_main{
+        height: 1200px;
+    }
+
+        #sub_child1_text{
+            margin-top: 40px;
+        }
+
+        #sub_child1_img img{
+             width: 95%;
+            height: 90vh;
+        }
+        #sub_child4_img img{
+           
+        margin-top: 20px;
+        }
+
+        #sub_child1_text a{
+            margin-right: -95px;
+        }
+
+       #sub_child4_img img{
+        margin-left: 85px;
+       }
+}
+
+/* For mobile devices (up to 767px) */
+
+    /* Media Query for Mobile Screens */
+@media (max-width: 767px) {
+    #right_Special_offers{
+        height: 1700px;
+    }
+    .cards_Special_offers {
+        width: 100%;
+        height: 375px;
+        padding: 15px; 
+    }
+
+    .cards_Special_offers img {
+        width: 70%; 
+    }
+
+    .cards_Special_offers h1 {
+        font-size: 18px; 
+    }
+
+    .cards_Special_offers span {
+        font-size: 14px; 
+        padding: 6px 12px; 
+    }
+
+    .cards_Special_offers a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
+    /*Enjoy our specially
+prepared burgers
+for you*/
+
+
+
+    /* Media Query for Mobile View (up to 767px) */
+/* @media (max-width: 767px) {
+    #sub_main{
+        height: 1500px;
+    }
+    #sub_child1,
+    #sub_child2 {
+        flex-direction: column; 
+        text-align: center; 
+}
+    #sub_child1{
+        margin-top: px;
+    }
+    #sub_child1_img,
+    #sub_child4_img {
+        width: 100%; 
+        margin: 0; 
+    }
+
+    #sub_child1_text,
+    #sub_child3_text {
+        width: 100%; 
+        margin: 20px 0; 
+        text-align: center; 
+    }
+
+    #sub_child1_text h1,
+    #sub_child3_text h1 {
+        font-size: 30px; 
+    }
+
+    #sub_child1_text p,
+    #sub_child3_text p {
+        font-size: 16px; 
+    }
+
+    #sub_child1_text a,
+    #sub_child3_text a {
+        padding: 10px 15px; 
+        font-size: 14px; 
+    }
+}
+ */
+
+ @media (max-width: 767px) {
+    #sub_main {
+        height: 1700px;
+        padding: 20px; 
+    }
+    #sub_child2{
+        margin-top: 295px;
+    
+    }
+    #sub_child2 a {
+        margin-left: 40px;
+    }
+    #sub_child3_text span {
+        margin-left: -110px;
+    }
+
+    #sub_child1_text a {
+        margin-left: 40px;
+    }
+
+
+    #text3 {
+        padding-top: 65px;
+    }
+
+    #sub_child1,
+    #sub_child2 {
+        display: flex;
+        flex-direction: column; 
+        /* align-items: center; 
+        text-align: center; */
+        margin-bottom: 20px; 
+    }
+
+    #sub_child1_img,
+    #sub_child4_img {
+        width: 90%; 
+        height: auto; 
+        margin: 0 auto; 
+    }
+
+    #sub_child1_text,
+    #sub_child3_text {
+        width: 90%; 
+        margin: 15px auto; 
+        /* text-align: center; */
+    }
+
+    #sub_child1_text h1,
+    #sub_child3_text h1 {
+        font-size: 28px; 
+        margin: 10px 0; 
+    }
+
+    #sub_child1_text p,
+    #sub_child3_text p {
+        font-size: 14px; 
+        margin: 10px 0;
+        line-height: 1.5; 
+    }
+
+    #sub_child1_text a,
+    #sub_child3_text a {
+        display: inline-block; 
+        padding: 12px 20px; 
+        font-size: 14px; 
+        margin-top: 10px; 
+    }
+
+    #text3 {
+        margin-top: 20px; 
+    }
+}
+
+
+
+/*Trending_Burgers_cards*/
+
+
+
+    /* Media Query for Laptop View (1025px - 1440px) */
+@media (max-width: 1440px) {
+    .Trending_Burgers_cards {
+        width: 22%; 
+    }
+}
+
+/* Media Query for Tablet View (768px - 1024px) */
+@media (max-width: 1024px) {
+    .Trending_Burgers_cards {
+        width: 45%; 
+    }
+    
+
+    .Trending_Burgers_cards h1 {
+        font-size: 22px; 
+    }
+
+    .Trending_Burgers_cards p {
+        font-size: 14px; 
+    }
+
+    .Trending_Burgers_cards span {
+        padding: 6px 12px; 
+    }
+
+    .Trending_Burgers_cards a {
+        padding: 8px 16px; 
+    }
+
+   #Trending_Burgers{
+    height: 900px;
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+   }
+   .Trending_Burgers_cards{
+    width: 75%;
+   }
+   #text_4{
+    padding-top: 95px;
+   }
+  #Dessert_Menu {
+    height: 1000px;
+    width:100%;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+   }
+
+   #Dessert_Menu .Dessert_Menu_cards{
+    width: 75%;
+    height: 65vh;
+   }
+
+   #last_imgs{
+    margin-top: 300px;
+   }
+  .map-container{
+    margin-top: 350px;
+
+  }
+}
+
+/* Media Query for Mobile View (up to 767px) */
+@media (max-width: 767px) {
+    #Trending_Burgers {
+        flex-direction: column; 
+        align-items: center; 
+        display: grid;
+        grid-template-columns: 1fr ;
+    }
+    #Trending_Burgers{
+        height: 1650px;
+    }
+    .Trending_Burgers_cards {
+        width: 90%; 
+        margin-bottom: 20px; 
+    }
+
+    .Trending_Burgers_cards h1 {
+        font-size: 20px; 
+    }
+
+    .Trending_Burgers_cards p {
+        font-size: 14px; 
+    }
+
+    .Trending_Burgers_cards span {
+        padding: 6px 12px; 
+    }
+
+    .Trending_Burgers_cards a {
+        padding: 8px 16px; 
+    }
+}
+
+
+    /*Dessert Menu */
+
+
+    @media (max-width: 1440px) {
+    .Dessert_Menu_cards {
+        width: 22%; /* Slightly smaller width for laptops */
+    }
+}
+
+/* Media Query for Tablet View (768px - 1024px) */
+@media (max-width: 1024px) {
+    .Dessert_Menu_cards {
+        width: 45%; 
+    }
+
+    .Dessert_Menu_cards h1 {
+        font-size: 22px; 
+    }
+
+    .Dessert_Menu_cards p {
+        font-size: 14px; 
+    }
+
+    .Dessert_Menu_cards span {
+        padding: 6px 12px; 
+    }
+
+    .Dessert_Menu_cards a {
+        padding: 8px 16px; 
+    }
+}
+
+/* Media Query for Mobile View (up to 767px) */
+@media (max-width: 767px) {
+    #Dessert_Menu {
+        height: 1800px;
+        flex-direction: column; 
+        align-items: center; 
+        /* margin-top: 350px; */
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+   
+
+    #Dessert_Menu .Dessert_Menu_cards {
+        width: 90%; 
+        height: 420px;
+        margin-bottom: 20px; 
+    }
+
+    .Dessert_Menu_cards h1 {
+        font-size: 20px; 
+    }
+
+    .Dessert_Menu_cards p {
+        font-size: 14px; 
+    }
+
+    .Dessert_Menu_cards span {
+        padding: 6px 12px; 
+    }
+
+    .Dessert_Menu_cards a {
+        /* padding: 8px 10px;  */
+        margin-right: 5px;
+    }
+
+    /* #clients_say{
+       padding-top: 690px;
+    } */
+}
+
+
+
+
+    /*clint_say*/
+
+
+
+    
+/* Media Query for Tablet View (768px - 1024px) */
+@media (max-width: 1024px) {
+    #clients_say {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    #clients_say_img {
+        width: 60%; 
+        
+        margin: 0; 
+    }
+
+    #clients_say_text {
+        width: 80%; 
+        margin: 20px 0; 
+        text-align: center; 
+    }
+
+    #clients_say_text h1 {
+        font-size: 40px; 
+    }
+
+    #clients_say_text span {
+        font-size: 35px; 
+    }
+
+    #clients_say_text p {
+        font-size: 14px; 
+    }
+
+    #clients_say_text h5 {
+        font-size: 18px; 
+    }
+}
+
+/* Media Query for Mobile View (up to 767px) */
+@media (max-width: 767px) {
+    #clients_say {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    #clients_say_img {
+        width: 90%; 
+        height: 200px;
+        margin: 0;
+    }
+
+    #clients_say_text {
+        width: 90%; 
+        /* margin: 20px 0;  */
+        margin-top: 650px;
+        text-align: center; 
+    }
+
+    #clients_say_text h1 {
+        font-size: 30px; 
+    }
+
+    #clients_say_text span {
+        font-size: 25px; 
+    }
+
+    #clients_say_text p {
+        font-size: 14px; 
+    }
+
+    #clients_say_text h5 {
+        font-size: 16px; 
+    }
+}
+
+
+    /*"last_imgs*/
+
+    @media (max-width: 767px){
+        #last_imgs{
+            margin-top: 350px;
+        }
+    }
+
+       /*footer*/
+       
+
+
+       @media (max-width: 1440px) {
+    #footer {
+        grid-template-columns: 1fr 1fr 1fr; 
+    }
+
+    #f_child1,
+    #f_child2,
+    #f_child3 {
+        padding: 15px;
+    }
+
+    #f_child2 {
+        font-size: 22px; 
+    }
+
+    #f_child3 h3 {
+        font-size: 22px; 
+    }
+
+    .email-input,
+    .subscribe-btn {
+        font-size: 14px; 
+    }
+}
+
+/* Media Query for Tablet View (768px - 1024px) */
+@media (max-width: 1024px) {
+    #footer {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    #f_child1,
+    #f_child2,
+    #f_child3 {
+        padding: 10px; 
+    }
+
+    #f_child2 {
+        font-size: 20px; 
+    }
+
+    #f_child3 h3 {
+        font-size: 20px; 
+    }
+
+    .email-input,
+    .subscribe-btn {
+        font-size: 14px; 
+    }
+}
+
+/* Media Query for Mobile View (up to 767px) */
+@media (max-width: 767px) {
+    #footer {
+        grid-template-columns: 1fr; 
+        padding: 10px; 
+    }
+
+    #f_child1,
+    #f_child2,
+    #f_child3 {
+        padding: 10px; 
+        text-align: center; 
+    }
+
+    #f_child2 {
+        font-size: 18px;
+    }
+
+    #f_child3 h3 {
+        font-size: 18px; 
+    }
+
+    .email-input,
+    .subscribe-btn {
+        font-size: 14px; 
+    }
+
+  .map-container{
+    margin-top: 750px;
+  }  
+}
+#toggleBtn {
+    display: none; /* Hide the toggle button by default */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    #nav ul {
+        display: none; /* Hide the nav list by default in mobile view */
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px; /* Adjust based on your navbar height */
+        left: 0;
+        width: 100%;
+        background-color: rgba(47, 33, 33, 0.582);
+        padding: 10px 0;
+    }
+
+    #nav ul.active {
+        display: flex; /* Show the nav list when active */
+    }
+
+    #toggleBtn {
+        display: block; /* Show the toggle button in mobile view */
+    }
+}
+
+
+       
+
     </style>
 </head>
 <body>
@@ -769,29 +1953,37 @@
         <div id="main_bg">
 
             <!-- Fixed Navbar -->
-            <div id="nav">
+             <div id="home">
+        <div class="ashok">
+            <div id="nav" class="assp">
                 <h1>Jevelin</h1>
-                <ul>
+                <div>
+                    <i class="fa-solid fa-grip-lines" id="toggleBtn"></i>
+                </div>
+                <ul id="navs">
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#offers">OFFERS</a></li>
                     <li><a href="#menu">MENU</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
-                <!-- <div>
-                    <a href="javascript:void(0);" onclick="bookmarkPage()">Bookmark This Page</a>
-                </div> -->
-            </div >
+              
 
-            <!-- Typing Effect -->
+                
+          
+            </div >
+        </div>
+
+           
             <span id="a1"></span>
 
-            <h2  id ="home">BURGER</h2>
+            <h2  >BURGER</h2>
 
             <!-- Image with animation -->
             <img id="burger-img" src="./main.png" alt="Burger Image">
             <a href="" id="see_more">SEE MORE</a>
 
+        </div>
         </div>
 
         <div id="second_main">
@@ -823,7 +2015,7 @@
 
             <div id="left_Special_offers">
                 <h3 id="offers">NOW IN TOWN</h3>
-                <img src="./img2_1st.jpg" alt="">
+                <img src="./img2_1st.jpg" alt="" id="left_Special_offers_img1">
 
                 <h1>Ham Sandwich</h1>
 
@@ -915,6 +2107,7 @@
             </div>
 
             <h1 id="text3"> Trending Burgers</h1>
+
             <div id="Trending_Burgers">
 
                 <div class="Trending_Burgers_cards">
@@ -987,6 +2180,7 @@
                 </div>
 
             </div>
+            <!--  -->
 
             <div id="clients_say">
                 <div id="clients_say_img">
@@ -1048,7 +2242,8 @@
     </div>
 
     <script>
-        const textElement = document.getElementById("a1");
+   
+   const textElement = document.getElementById("a1");
         const text = "CRISPY TENDER";
         let index = 0;
 
@@ -1075,7 +2270,29 @@
         }
 
         typeText();
+
+        
+
+            // Instructions for bookmarking
+         
+
+
+
+
+            // nav bar
+            document.getElementById('toggleBtn').addEventListener('click', function() {
+    var navList = document.getElementById('navs');
+    navList.classList.toggle('active');
+});
+
     </script>
 
+
+
+
+
+
+
+   
 </body>
 </html>
